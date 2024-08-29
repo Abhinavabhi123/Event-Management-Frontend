@@ -1,0 +1,111 @@
+.banner-carousel-wrapper {
+  width: 100vw;
+  height: 45vh;
+  max-width: 100vw;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+}
+.banner-carousel-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 0;
+}
+.banner-carousel-data::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.315);
+  z-index: 0;
+}
+.banner-carousel-data {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+}
+.banner-arrow-section {
+  width: 5%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+}
+.banner-arrow-section:nth-child(1) {
+  right: 0;
+  top: 0;
+}
+.banner-arrow-section svg {
+  width: fit-content;
+  height: fit-content;
+  font-size: 5rem;
+  color: white;
+  cursor: pointer;
+}
+.banner-center-section {
+  width: 94%;
+  height: 100%;
+  background-color: transparent;
+  position: relative;
+}
+.banner-center-section p {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  max-width: 250px;
+  font-weight: 900;
+  line-height: 2rem;
+  letter-spacing: 5px;
+  top: 35%;
+  transform: translateY(-50%);
+  text-align: right;
+  right: 0;
+  z-index: 2;
+  font-family: "Lobster", sans-serif, fantasy;
+  animation: slide 0.5s ease forwards;
+}
+
+@keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .banner-center-section p {
+    max-width: 550px;
+    font-size: 35px;
+    line-height: 3rem;
+    letter-spacing: 10px;
+  }
+  .banner-arrow-section svg {
+    font-size: 5rem;
+  }
+  .banner-arrow-section {
+    width: 3%;
+  }
+}
+
+@media screen and (min-width: 1027px) {
+  .banner-carousel-wrapper {
+    height: 85vh;
+  }
+  .banner-center-section p {
+    font-size: 45px;
+  }
+}

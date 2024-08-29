@@ -1,0 +1,140 @@
+.login-page-wrapper {
+  width: 100%;
+  height: 100dvh;
+}
+.login-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-form-wrapper {
+  width: 70%;
+  height: 75%;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--primary-color);
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 55px;
+}
+.login-form-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  top: 0;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  border-radius: 100px;
+  rotate: -45deg;
+  transform: translateX(50%) translateY(30%);
+  z-index: 0;
+  transition: rotate 0.5s ease, transform 0.5s ease;
+}
+.login-form-wrapper.sign-up::before {
+  rotate: 150deg;
+  transform: translateX(40%) translateY(55%);
+}
+
+.login-form-left-section,
+.login-form-right-section {
+  width: 100%;
+  height: 100%;
+}
+
+.login-form-right-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.login-form-wrapper.sign-up .login-form-right-section {
+  display: none;
+}
+.login-form-right-section img {
+  width: 25rem;
+  height: auto;
+}
+.login-form-right-section p {
+  font-size: 24px;
+  color: var(--primary-color);
+  font-family: "Lobster", sans-serif;
+}
+.login-form-wrapper.sign-up .login-form-left-section{
+  display: none;
+}
+.login-form-left-section form {
+  width: 70%;
+  height: 80%;
+  /* background-color: red; */
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+.login-form-left-section form .login-title {
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+}
+.login-form-left-section .login-form-elements {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.login-form-left-section .login-form-elements input {
+  width: 100%;
+  height: 2rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  font-family: "Alegreya", sans-serif;
+  background-color: transparent;
+  color: white;
+}
+.login-form-left-section .login-form-elements input::placeholder {
+  color: white;
+}
+.login-form-left-section .login-form-button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.login-form-left-section .login-form-button-wrapper button {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: white;
+  color: var(--primary-color);
+  font-family: "Alegreya", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+}
+.login-form-left-section form .login-form-elements p {
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+}
+
+.login-form-left-section .sign-up-suggestion {
+  text-align: center;
+}
+.login-form-left-section .sign-up-suggestion p {
+  color: white;
+  font-size: 15px;
+}
+.login-form-left-section .sign-up-suggestion a {
+  color: yellow;
+  cursor: pointer;
+}
