@@ -45,18 +45,19 @@
   height: 100%;
 }
 
-.login-form-right-section {
+.login-form-right-section{
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 2rem;
+  animation: show 0.8s ease;
 }
 .login-form-wrapper.sign-up .login-form-right-section {
   display: none;
 }
-.login-form-right-section img {
+.login-form-right-section img{
   width: 25rem;
   height: auto;
 }
@@ -137,4 +138,112 @@
 .login-form-left-section .sign-up-suggestion a {
   color: yellow;
   cursor: pointer;
+}
+.login-form-left-section .sign-up-suggestion a:hover{
+  color: white;
+}
+.sign-up-form-right-section,
+.sign-up-form-left-section{
+  display: none;
+  width: 50%;
+  height: 100%;
+  
+}
+
+/** ------ */
+.login-form-wrapper.sign-up .sign-up-form-left-section{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 50%;
+  transform: translateY(-5%) translateX(-5%);
+  animation: show 0.8s ease;
+}
+@keyframes show {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+.sign-up-form-left-section p{
+  color: var(--primary-color);
+  font-size: 30px;
+  font-weight: 600;
+}
+.sign-up-form-left-section img {
+  width: 20rem;
+  height: auto;
+}
+.login-form-wrapper.sign-up .sign-up-form-right-section{
+  position: relative;
+  z-index:1;
+  display: flex;
+  /* background-color: green; */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sign-up-form-right-section h4{
+    color: white;
+    font-size: 30px;
+}
+.sign-up-form-right-section form {
+  width: 70%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+}
+.sign-up-form-right-section form input {
+  width: 100%;
+  height: 2rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  font-family: "Alegreya", sans-serif;
+  background-color: transparent;
+  color: white;
+}
+.sign-up-form-right-section form input::placeholder{
+  color: white;
+}
+.sign-up-form-right-section form .sign-up-btn-wrapper{
+  display: flex;
+  justify-content: center;
+}
+.sign-up-form-right-section form button{
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: white;
+  color: var(--primary-color);
+  font-family: "Alegreya", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.sign-up-form-right-section .have-an-account{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+.sign-up-form-right-section .have-an-account p{
+  color: white;
+  font-size: 16px;
+}
+.sign-up-form-right-section .have-an-account p:nth-child(2){
+  color: yellow;
+  cursor: pointer;
+}
+.sign-up-form-right-section .have-an-account p:nth-child(2):hover{
+  color: white;
 }

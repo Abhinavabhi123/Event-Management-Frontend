@@ -33,7 +33,10 @@ body {
   overflow-x: hidden;
   position: relative;
 }
-
+.error-message{
+  font-size: 12px;
+  color: red;
+}
 
 ::-webkit-scrollbar{
   width: 15px;
