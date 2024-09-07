@@ -1,12 +1,26 @@
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "../styles/nav-bar.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Logo from "../assets/Images/logo.png";
 // import Logo from "/Logo.svg";
 
 export default function NavBar() {
   const navigate = useNavigate();
+  const location = useLocation().pathname;
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
+
+  useEffect(() => {
+    const loggedIn = localStorage.getItem("eventTkn");
+    if (loggedIn) {
+      setIsLogin(true);
+    }
+  }, []);
+
+  function handleClick(path = "/") {
+    navigate(path);
+    setToggleMenu(false);
+  }
 
   return (
     <div className="navbar-wrapper">
@@ -15,6 +29,12 @@ export default function NavBar() {
       </div>
       <nav className="navbar-items">
         <ul>
+          <li
+            className={`${location === "/" && "navbar-active"}`}
+            onClick={() => navigate("/")}
+          >
+            Home
+          </li>
           <li>Events</li>
           <li>Services</li>
           <li>Portfolio</li>
@@ -22,9 +42,13 @@ export default function NavBar() {
           <li>About</li>
           <li>Contact</li>
         </ul>
-        <div className="login-btn" onClick={()=>navigate('/login')}>
-          <div className="button-text">Login</div>
-        </div>
+        {!isLogin ? (
+          <div className="login-btn" onClick={() => navigate("/login")}>
+            <div className="button-text">Login</div>
+          </div>
+        ) : (
+          ""
+        )}
       </nav>
       {/* Mobile responsive navbar */}
       <div className="nav-menu">
@@ -47,12 +71,22 @@ export default function NavBar() {
           }`}
         >
           <ul>
-            <li onClick={()=>setToggleMenu(false)}>Events</li>
-            <li onClick={()=>setToggleMenu(false)}>Services</li>
-            <li onClick={()=>setToggleMenu(false)}>Portfolio</li>
-            <li onClick={()=>setToggleMenu(false)}>Clients</li>
-            <li onClick={()=>setToggleMenu(false)}>About</li>
-            <li onClick={()=>setToggleMenu(false)}>Contact</li>
+            <li onClick={() => handleClick("/")}>Home</li>
+            <li onClick={() => setToggleMenu(false)}>Events</li>
+            <li onClick={() => setToggleMenu(false)}>Services</li>
+            <li onClick={() => setToggleMenu(false)}>Portfolio</li>
+            <li onClick={() => setToggleMenu(false)}>Clients</li>
+            <li onClick={() => setToggleMenu(false)}>About</li>
+            <li onClick={() => setToggleMenu(false)}>Contact</li>
+            <li>
+              {!isLogin ? (
+                <div className="item-btn" onClick={() => navigate("/login")}>
+                  <div className="button-text">Login</div>
+                </div>
+              ) : (
+                ""
+              )}
+            </li>
           </ul>
         </div>
       </div>

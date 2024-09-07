@@ -1,0 +1,87 @@
+.experience-main-wrapper {
+  width: 100%;
+  height: fit-content;
+  min-height: 20rem;
+  background-color: var(--primary-color);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience-inner-wrapper {
+  width: fit-content;
+  height: fit-content;
+  /* max-height: 8rem; */
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+}
+.experience-counter-wrapper {
+  width: fit-content;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.experience-counter-wrapper span {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.experience-counter-wrapper span span {
+  margin-left: 0.5rem;
+}
+.experience-counter-wrapper span span span {
+  font-size: 2.5rem;
+}
+.experience-counter-wrapper p {
+  width: fit-content;
+  font-size: 18px;
+  text-wrap: nowrap;
+}
+.experience-main-wrapper::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../assets/svg/experience-leftbg.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+  .experience-main-wrapper::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url("../assets/svg/experience-right-bg.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+@media screen and (min-width: 768px) {
+ 
+  .experience-inner-wrapper {
+    flex-direction: row;
+  }
+  .experience-inner-wrapper {
+    gap: 1rem;
+  }
+  .experience-counter-wrapper span {
+    font-size: 5rem;
+  }
+  .experience-counter-wrapper span span span {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .experience-inner-wrapper {
+    gap: 5rem;
+  }
+}

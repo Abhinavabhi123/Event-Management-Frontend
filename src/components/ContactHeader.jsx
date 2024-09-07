@@ -22,7 +22,7 @@ export default function ContactHeader() {
         <FaFacebookF />
         <FaXTwitter />
         <FaYoutube size={20} />
-        <FaInstagram  size={20}/>
+        <FaInstagram size={20} />
       </div>
     </div>
   );

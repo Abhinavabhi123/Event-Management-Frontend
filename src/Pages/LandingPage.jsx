@@ -4,6 +4,8 @@ import BannerCarousel from "../components/BannerCarousel";
 import NavBar from "../components/NavBar";
 import WhatsAppContact from "../components/WhatsAppContact";
 import ContactForm from "../components/ContactForm";
+import HomeEvent from "../components/Events/HomeEvent";
+import Experience from "../components/Experience";
 
 export default function LandingPage() {
   return (
@@ -11,6 +13,8 @@ export default function LandingPage() {
       <ContactHeader />
       <NavBar />
       <BannerCarousel />
+      <HomeEvent />
+      <Experience />
       <ContactForm />
       <WhatsAppContact />
     </div>
