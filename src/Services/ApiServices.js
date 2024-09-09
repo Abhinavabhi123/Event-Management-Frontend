@@ -1,6 +1,7 @@
 import axios from "axios";
 import { RegisterUser, UserLogin } from "../../urls";
 import { successToast, warningToast } from "../components/ToastMessage/Message";
+import { eventData } from "../constants";
 
 // Register user
 export async function registerUser(data, setLogin, resetForm) {
@@ -38,4 +39,9 @@ export async function userLogin(data, resetForm, navigate) {
       }
       console.log(error);
     });
+}
+
+
+export const getEvents =(setEventData)=>{
+  setEventData(eventData)
 }

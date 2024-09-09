@@ -1,0 +1,38 @@
+.social-media-footer-wrapper {
+  width: 100%;
+  height: 5rem;
+  background-color: rgb(108, 108, 108);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.social-media-footer-wrapper img {
+  width: 5rem;
+  cursor: pointer;
+}
+.social-media-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.social-media-separation{
+    width: 2px;
+    height: 2rem;
+    background-color: gray;
+    margin: 0 0.5rem ;
+}
+
+.social-media-icon-wrapper svg{
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 768px) {
+  .social-media-footer-wrapper {
+    flex-direction: row;
+  }
+}

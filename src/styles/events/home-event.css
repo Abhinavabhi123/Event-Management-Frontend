@@ -1,5 +1,17 @@
-.home-event-wrapper-container{
-    width: 100%;
-    height: fit-content;
-    background-color: red;
+.home-event-wrapper-container {
+  width: 100%;
+  height: fit-content;
+}
+.home-event-wrapper-container p {
+  margin: 2rem 0rem;
+  text-align: center;
+  font-size: 25px;
+}
+.home-event-wrapper {
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 0rem 8rem 4rem 8rem;
+  gap: 1rem;
 }

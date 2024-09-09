@@ -6,6 +6,7 @@ import WhatsAppContact from "../components/WhatsAppContact";
 import ContactForm from "../components/ContactForm";
 import HomeEvent from "../components/Events/HomeEvent";
 import Experience from "../components/Experience";
+import SocialMediaFooter from "../components/Footer/SocialMediaFooter";
 
 export default function LandingPage() {
   return (
@@ -16,6 +17,7 @@ export default function LandingPage() {
       <HomeEvent />
       <Experience />
       <ContactForm />
+      <SocialMediaFooter/>
       <WhatsAppContact />
     </div>
   );
