@@ -1,7 +1,7 @@
 import axios from "axios";
 import { RegisterUser, UserLogin } from "../../urls";
 import { successToast, warningToast } from "../components/ToastMessage/Message";
-import { eventData } from "../constants";
+import { eventCategory, eventData } from "../constants";
 
 // Register user
 export async function registerUser(data, setLogin, resetForm) {
@@ -35,13 +35,18 @@ export async function userLogin(data, resetForm, navigate) {
     })
     .catch((error) => {
       if (error.status === 401 && error.response.data.isSuccess === false) {
-        warningToast(error.response.data.message +" "+"Please check Email and Password");
+        warningToast(
+          error.response.data.message + " " + "Please check Email and Password"
+        );
       }
       console.log(error);
     });
 }
 
+export const getEvents = (updateState) => {
+  updateState(eventData);
+};
 
-export const getEvents =(setEventData)=>{
-  setEventData(eventData)
-}
+export const getAllCategories = (updateState) => {
+  updateState(eventCategory);
+};

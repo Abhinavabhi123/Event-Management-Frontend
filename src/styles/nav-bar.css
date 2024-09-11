@@ -33,6 +33,7 @@
   cursor: pointer;
   transition: color 0.3s;
   position: relative;
+  user-select: none;
 }
 
 .navbar-wrapper .navbar-items ul li:hover,

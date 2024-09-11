@@ -69,3 +69,149 @@ export const eventData = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget suscipit magna. Pellentesque non metus sit amet ligula lobortis imperdiet. Curabitur a arcu a dui consectetur aliquet. Nulla vitae porttitor dui, nec pellentesque arcu. Sed sit amet eros a eros ultrices laoreet at in mauris. Maecenas auctor ultricies risus, eu fringilla libero.",
   },
 ];
+
+export const eventCategory = [
+  {
+    category: "Corporate Events",
+    events: [
+      {
+        name: "Conferences and Seminars",
+      },
+      {
+        name: "Product Launches",
+      },
+      {
+        name: "Trade Shows and Expos",
+      },
+      {
+        name: "Team Building Activities",
+      },
+      {
+        name: "Corporate Dinners and Award Ceremonies",
+      },
+      {
+        name: "Business Meetings and Workshops",
+      },
+    ],
+  },
+  {
+    category: "Social Events",
+    events: [
+      {
+        name: "Weddings and Receptions",
+      },
+      {
+        name: "Birthday Parties",
+      },
+      {
+        name: "Anniversaries",
+      },
+      {
+        name: "Family Reunions",
+      },
+      {
+        name: "Religious Ceremonies",
+      },
+    ],
+  },
+  {
+    category: "Cultural Events",
+    events: [
+      {
+        name: "Festivals and Carnivals",
+      },
+      {
+        name: "Art Exhibitions",
+      },
+      {
+        name: "Music and Dance Performances",
+      },
+      {
+        name: "Theater Productions",
+      },
+      {
+        name: "Cultural Fairs",
+      },
+    ],
+  },
+  {
+    category: "Charity and Fundraising Events",
+    events: [
+      {
+        name: "Charity Galas",
+      },
+      {
+        name: "Auctions",
+      },
+      {
+        name: "Walkathons/Marathons",
+      },
+      {
+        name: "Benefit Concerts",
+      },
+      {
+        name: "Fundraising Dinners",
+      },
+    ],
+  },
+  {
+    category: "Sports Events",
+    events: [
+      {
+        name: "Sporting Tournaments",
+      },
+      {
+        name: "Marathons and Races",
+      },
+      {
+        name: "Esports Competitions",
+      },
+      {
+        name: "Sports Awards Ceremonies",
+      },
+      {
+        name: "Adventure and Extreme Sports Events",
+      },
+    ],
+  },
+  {
+    category: "Entertainment Events",
+    events: [
+      {
+        name: "Concerts and Live Shows",
+      },
+      {
+        name: "Movie Premieres",
+      },
+      {
+        name: "Fashion Shows",
+      },
+      {
+        name: "Comedy Nights",
+      },
+      {
+        name: "Festivals and Carnivals",
+      },
+    ],
+  },
+  {
+    category: "Educational Events",
+    events: [
+      {
+        name: "Workshops and Training Programs",
+      },
+      {
+        name: "Educational Fairs",
+      },
+      {
+        name: "Science Exhibitions",
+      },
+      {
+        name: "Graduation Ceremonies",
+      },
+      {
+        name: "Career Fairs",
+      },
+    ],
+  },
+];

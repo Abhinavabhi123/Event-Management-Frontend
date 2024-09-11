@@ -35,7 +35,12 @@ export default function NavBar() {
           >
             Home
           </li>
-          <li>Events</li>
+          <li
+            className={`${location === "/events" && "navbar-active"}`}
+            onClick={() => navigate("/events")}
+          >
+            Events
+          </li>
           <li>Services</li>
           <li>Portfolio</li>
           <li>Clients</li>
@@ -72,7 +77,7 @@ export default function NavBar() {
         >
           <ul>
             <li onClick={() => handleClick("/")}>Home</li>
-            <li onClick={() => setToggleMenu(false)}>Events</li>
+            <li onClick={() => handleClick("/events")}>Events</li>
             <li onClick={() => setToggleMenu(false)}>Services</li>
             <li onClick={() => setToggleMenu(false)}>Portfolio</li>
             <li onClick={() => setToggleMenu(false)}>Clients</li>

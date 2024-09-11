@@ -5,6 +5,7 @@ import { Toaster } from "sonner";
 
 const LandingPage = React.lazy(() => import("./Pages/LandingPage"));
 const LoginPage = React.lazy(() => import("./Pages/LoginPage"));
+const EventPage = React.lazy(() => import("./Pages/EventPages"));
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/events" element={<EventPage />} />
           </Routes>
         </Suspense>
       </Router>
